@@ -1,12 +1,12 @@
 ---
 
-- hosts: zabbix_database
+- hosts: HOST-SERVER
   become: true
   roles:
     - role: geerlingguy.mysql
 
 - name: Installing Zabbix
-  hosts: zabbix_server
+  hosts: HOST-SERVER
   become: true
   collections:
     - community.zabbix
