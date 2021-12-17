@@ -1,8 +1,8 @@
 machines = {
-  "server-1"   => {"memory" => "2048", "cpu" => "2", "ip" => "100"},
+  "server-1"   => {"memory" => "1024", "cpu" => "1", "ip" => "100"},
   "server-2"   => {"memory" => "1024", "cpu" => "1", "ip" => "110"},
   "server-3"   => {"memory" => "1024", "cpu" => "1", "ip" => "120"},
-  "server-4"  => {"memory" => "4096", "cpu" => "2", "ip" => "130"},
+  "server-4"  => {"memory" => "1024", "cpu" => "1", "ip" => "130"},
 }
 
 Vagrant.configure("2") do |config|
@@ -19,6 +19,7 @@ Vagrant.configure("2") do |config|
         vb.customize ["modifyvm", :id, "--groups", "/teste-empresa"]
       end
       machine.vm.provision "shell", path: "provision.sh"
+      machine.vm.provision "shell", inline: "echo ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys"
     end
 end
 end

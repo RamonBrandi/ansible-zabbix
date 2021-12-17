@@ -10,8 +10,8 @@ echo '10.20.20.130 server-4.emp.example' >> /etc/hosts
 #ansible
 apt-get update
 apt install python3
-apt install python3-pip
-pip install ansible
+apt install -y python3-pip
+pip3 install ansible
 
 #git
 git clone https://github.com/RamonBrandi/ansible-zabbix.git
