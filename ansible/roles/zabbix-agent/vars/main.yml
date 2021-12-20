@@ -1,0 +1,5 @@
+---
+# vars file for zabbix-server
+zabbix_release: "5.5"
+zabbix_version: "5.5-1"
+zabbix_server: localhost

@@ -1,0 +1,18 @@
+---
+- name: Install Zabbix Repository CentOS
+  yum: 
+    name: https://repo.zabbix.com/zabbix/{{ zabbix_release }}/rhel/{{ ansible_distribution_major_version }}/{{ ansible_architecture }}/zabbix-release-{{ zabbix_version }}.el{{ ansible_distribution_major_version }}.noarch.rpm
+    state: present
+    validate_certs: false  
+
+- name: Install Zabbix Agent CentOS
+  yum:
+    name: zabbix-agent
+    state: latest
+
+- name: Copy template zabbix-agent.conf CentOS
+  template:
+    src: templates/zabbix_agent2.conf.j2
+    dest: /etc/zabbix/zabbix_agent2.conf 
+  notify: Start service CentOS
+
