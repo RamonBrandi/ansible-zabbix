@@ -18,8 +18,6 @@ Vagrant.configure("2") do |config|
         vb.cpus = conf["cpu"]
         vb.customize ["modifyvm", :id, "--groups", "/teste-empresa"]
       end
-      machine.vm.provision "shell", path: "provision.sh"
-      machine.vm.provision "shell", inline: "cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys"
     end
 end
 end

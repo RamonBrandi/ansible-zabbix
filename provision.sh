@@ -12,6 +12,3 @@ apt-get update
 apt install python3
 apt install -y python3-pip
 pip3 install ansible
-
-#git
-git clone https://github.com/RamonBrandi/ansible-zabbix.git
