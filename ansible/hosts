@@ -1,11 +1,11 @@
 [HOST-SERVER]
-10.20.20.100 ansible_user=vagrant ansible_ssh_private_key_file="~/.ssh/id_rsa.pub"
+10.20.20.100 ansible_user=vagrant ansible_ssh_private_key_file="/home/vagrant/.ssh/id_rsa.pub"
 
 [SERVER-1]
-10.20.20.110 ansible_user=vagrant ansible_ssh_private_key_file="~/.ssh/id_rsa.pub"
+10.20.20.110 ansible_user=vagrant ansible_ssh_private_key_file="/home/vagrant/.ssh/id_rsa.pub"
 
 [SERVER-2]
-10.20.20.120 ansible_user=vagrant ansible_ssh_private_key_file="~/.ssh/id_rsa.pub"
+10.20.20.120 ansible_user=vagrant ansible_ssh_private_key_file="/home/vagrant/.ssh/id_rsa.pub"
 
 [SERVER-3]
-10.20.20.130 ansible_user=vagrant ansible_ssh_private_key_file="~/.ssh/id_rsa.pub"
+10.20.20.130 ansible_user=vagrant ansible_ssh_private_key_file="/home/vagrant/.ssh/id_rsa.pub"
