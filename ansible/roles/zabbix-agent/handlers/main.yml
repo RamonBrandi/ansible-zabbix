@@ -1,13 +1,7 @@
 ---
 # handlers file for zabbix-server
-- name: Start service CentOS
+- name: Start service 
   service: 
     name: zabbix-agent 
     state: restarted 
-    enabled: yes
-
-- name: Start service Ubuntu
-  service: 
-    name: zabbix-agent
-    state: restarted  
     enabled: yes

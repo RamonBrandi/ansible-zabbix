@@ -24,4 +24,4 @@
   template:
     src: templates/zabbix_agent.conf.j2
     dest: /etc/zabbix/zabbix-agent2.conf
-  notify: Start service Ubuntu
+  notify: Start service

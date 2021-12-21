@@ -14,5 +14,5 @@
   template:
     src: templates/zabbix_agent2.conf.j2
     dest: /etc/zabbix/zabbix_agent2.conf 
-  notify: Start service CentOS
+  notify: Start service
 
